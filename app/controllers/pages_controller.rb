@@ -8,4 +8,12 @@ class PagesController < ApplicationController
   def profile 
     
   end
+
+  def message
+
+  end
+
+  def new 
+    
+  end
 end

@@ -5,4 +5,5 @@ Rails.application.routes.draw do
    root to: "pages#index"
 
    get "/profile", to: "pages#profile"
+   get "/message", to: "pages#message"
 end

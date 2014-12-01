@@ -67,6 +67,14 @@
     padding: 10px;
    
   }
+
+  .table-prof-mobile {
+    th {
+      padding: 5px;
+    }
+    padding: 10px;
+   
+  }
 }
 
 .infiniscroll{
@@ -74,4 +82,12 @@
   overflow-y: scroll;
   padding-bottom: 10px;
 
+}
+
+// MESSAGES
+
+.msg-btn {
+  .btn {
+    border-radius: 0;
+  }
 }
