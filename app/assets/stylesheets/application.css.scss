@@ -10,6 +10,48 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require style
+ *= require normalize
+ *= require mediaqueries
  *= require_self
+
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-color: #ecf0f1;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-default {
+  background-color: #3498db;
+  border-radius: 0;
+}
+
+.navbar-default .navbar-nav {
+  li a {
+    color: white;
+  }
+
+  li {
+    color: white;
+  }
+
+  li a:hover {
+    color: #e2e2e2;
+  }
+
+  li.active a{
+    background-color: #2ecc71;
+    color: white;
+  }
+
+  .active a:hover {
+    background-color: #2ecc71;
+    color: white;
+  }
+}
+

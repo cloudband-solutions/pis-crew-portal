@@ -1,0 +1,77 @@
+// LOGIN PAGE
+.log-in {
+  background-color:#2ecc71;
+  width: 50%;
+  margin-top: 9%;
+  color: white;
+  padding: 10px;
+  padding-bottom: 50px;
+}
+
+.form-inputs input{
+  width: 70%;
+  margin-top: 1%;
+  height: 40px;
+  color: black;
+  padding: 10px;
+}
+
+.btn-login {
+  .btn {
+    border-radius: 0!important;
+    width: 70%;
+    margin-top: 3%;
+  }
+}
+.create-an-account {
+  a {
+     color: white;
+  }
+  padding-left: 95px;
+  text-align: left;
+  margin-top: 1%;
+}
+
+// DASHBOARD
+
+.latest-er {
+  h3 {
+    background-color:#bdc3c7;
+    padding: 10px;
+    color: white;
+  }
+}
+
+// PROFILE
+
+.image-profile {
+  border-right: 1px solid #e2e2e2;
+  position: fixed;
+
+  .name {
+    font-size: 2em;
+  }
+ 
+}
+.details-profile {
+   h4 {
+    background-color: #bdc3c7;
+    padding: 5px;
+    color: white;
+  }
+  .table-prof {
+    th {
+      width: 20%;
+      padding: 5px;
+    }
+    padding: 10px;
+   
+  }
+}
+
+.infiniscroll{
+  max-height: 570px;
+  overflow-y: scroll;
+  padding-bottom: 10px;
+
+}
