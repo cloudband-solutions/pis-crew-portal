@@ -4,29 +4,31 @@
     <div class="for_non_mobile">
       <div class="row">
         <div class="col-md-12 latest-er">
-         <h3>  Rey's Latest Employment Record</h3>
-          <table class="table table-bordered">
-            <tr>
-              <th>Vessel</th> 
+         <h3>  <%= "#{@crew['firstname']}"%>'s Latest Employment Record</h3>
+          <table class="table table-bordered" style="width: 100%; font-size: 12px;">
+             <tr>
+              <th>Vessel</th>
               <th>Flag</th>
               <th>Type</th>
               <th>Manning Agent</th>
               <th>Rank</th>
               <th>Sign On</th>
               <th>Sign Off</th>
-              <th>Reason of Disemabarkation</th>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </table>
+              <th>Reason of Disembarkation</th>
+             </tr>
+             <% @crew['employment_records_index'].each do |er| %>
+               <tr>
+                <td><%= er['vessel'] %></td>
+                <td><%= er['flag'] %></td>
+                <td><%= er['type'] %></td>
+                <td><%= er['manning_agent'] %></td>
+                <td><%= er['rank'] %></td>
+                <td><%= er['sign_on'] %></td>
+                <td><%= er['sign_off'] %></td>
+                <td><%= er['reason'] %></td>
+               </tr>
+             <% end %>
+           </table>
         </div>  
       </div>
     </div>

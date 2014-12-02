@@ -1,2 +1,3 @@
 access_token: 60003546ffbab4697bd7bc9f8b336119
-pis_server_url: http://localhost:3000/api/v1
+pis_server_url_api: http://localhost:3000/api/v1
+pis_server_url: http://localhost:3000

@@ -4,145 +4,156 @@
   <div class="row">
     <div class="col-md-3 image-profile">
       <center>
-       <%= image_tag "sample.jpg" %> <br />
-       <span class="name">Reynaldo Logmao</span><br /> <span>STATUS</span>
+       <%= image_tag "#{Settings.pis_server_url}#{@crew['picture']}" %> <br />
+       <div class="name"><%= "#{@crew['firstname']} #{@crew['middlename']} #{@crew['lastname']}" %></div>
+       Status: <span class="status"> <%= "#{@crew['status']}" %></span> |
+       Rank: <span class="rank"><%= "#{@crew['rank']}" %></span> <br />
+       Code Number: <span class="code_no"><%= "#{@crew['code_number']}" %></span> 
       </center>
     </div>
     <div class="col-md-9 details-profile infiniscroll">
       <h4>GENERAL INFORMATION</h4>
       <table class="table-prof" style="width: 100%;">
         <tr>
+         <th>Date Employed: </th>
+         <td><%= "#{@crew['date_employed']}" %></td>
+
+         <th>Date of Promotion: </th>
+         <td><%= "#{@crew['date_of_promotion']}" %></td>
+        </tr>
+        <tr>
          <th>Vessel Assign: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['assigned_vessel']}" %></td>
 
          <th>Age: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['age']}" %></td>
         </tr>
 
         <tr>
          <th>Home Address: </th>
-         <td> Basha </td>
+         <td><%= "#{@crew['address']}" %></td>
 
          <th>City Address: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['city_address']}" %></td>
         </tr>
 
         <tr>
          <th>Provincial Address: </th>
-         <td> Basha </td>
+         <td><%= "#{@crew['provincial_address']}" %></td>
          <th>Zipcode: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['zip_code']}" %></td>
         </tr>
 
         <tr>
          <th>Birthday: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['birthday']}" %></td>
          <th>Birthplace: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['birthplace']}" %></td>
         </tr>
 
         <tr>
          <th>Telephone: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['telephone_no']}" %></td>
          <th>Cellphone: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['cellphone_no']}" %></td>
         </tr>
 
         <tr>
          <th>Civil Status: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['civil_status']}" %></td>
          <th>Nationality: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['nationality']}" %></td>
         </tr>
 
         <tr>
          <th>Height: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['height']}" %></td>
          <th>Weight: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['weight']}" %></td>
         </tr>
 
         <tr>
-         <th>Shoe Color: </th>
-         <td>Basha </td>
+         <th>Shoe Size: </th>
+         <td><%= "#{@crew['shoe_size']}" %></td>
          <th>Cloth Size: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['cloth_size']}" %></td>
         </tr>
 
         <tr>
          <th>Eye Color: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['eye_color']}" %></td>
          <th>Distinguishing Mark: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['distinguishing_mark']}" %></td>
         </tr>
 
         <tr>
          <th>Blood Type: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['blood_type']}" %></td>
          <th>Blood Pressure: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['blood_pressure']}" %></td>
         </tr>
 
         <tr>
          <th>TIN Number: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['tin_no']}" %></td>
          <th>SSS Number: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['sss_no']}" %></td>
         </tr>
 
         <tr>
          <th>PAG-IBIG number: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['pagibig_number']}" %></td>
          <th>Philhealth: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['philhealth_number']}" %></td>
         </tr>
 
        <tr>
          <th>Father's Name: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['father_name']}" %></td>
          <th>Mother's Maiden Name: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['mother_maiden_name']}" %></td>
       </tr>
 
       <tr>
          <th>Spouse Name: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['spouse_name']}" %></td>
          <th>Number of Children: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['number_of_children']}" %></td>
       </tr>
 
        <tr>
          <th>Are you a smoker? </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['is_smoker']}" %></td>
          <th>Nearest Relative: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['nearest_relative_name']}" %></td>
       </tr>
 
        <tr>
          <th>Relationship: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['nearest_relative_relationship']}" %></td>
          <th>Address: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['nearest_relative_address']}" %></td>
        </tr>
       </table>
 
       <h4>EDUCATIONAL ATTAINMENT</h4>
-      <table class="table table-bordered" style="width: 100%;">
+      <table class="table table-bordered" style="width: 100%; font-size: 12px;">
          <tr>
           <th>Year</th>
           <th>School</th>
           <th>Course Finished</th>
          </tr>
-
+         <% @crew['educational_attainments'].each do |e|%>
          <tr>
-          <td>Year</td>
-          <td>School</td>
-          <td>Course Finished</td>
+          <td><%= e['year_graduated']%></td>
+          <td><%= e['school']%></td>
+          <td><%= e['course_finished']%></td>
          </tr>
+         <% end %>
       </table>
 
       <h4>LICENSES</h4>
-      <table class="table table-bordered" style="width: 100%;">
+      <table class="table table-bordered" style="width: 100%; font-size: 12px;">
          <tr>
           <th>Type</th>
           <th>Number</th>
@@ -151,19 +162,20 @@
           <th>Issued By</th>
           <th>Actions</th>
          </tr>
-
+         <% @crew['licenses'].each do |l| %>
          <tr>
-          <td>Year</td>
-          <td>School</td>
-          <td>Course Finished</td>
-          <td>Year</td>
-          <td>School</td>
-          <td>Course Finished</td>
+          <td><%= l['type'] %></td>
+          <td><%= l['license_number'] %></td>
+          <td><%= l['date_issued'] %></td>
+          <td><%= l['expiry_date'] %></td>
+          <td><%= l['issued_by'] %></td>
+          <td>Download</td>
          </tr>
+         <% end %>
       </table>
 
       <h4>CERTIFICATES</h4>
-      <table class="table table-bordered" style="width: 100%;">
+      <table class="table table-bordered" style="width: 100%; font-size: 12px;">
          <tr>
           <th>Type</th>
           <th>Number</th>
@@ -172,19 +184,20 @@
           <th>Issued By</th>
           <th>Actions</th>
          </tr>
-
+        <% @crew['certificates'].each do |cert| %>
          <tr>
-          <td>Year</td>
-          <td>School</td>
-          <td>Course Finished</td>
-          <td>Year</td>
-          <td>School</td>
-          <td>Course Finished</td>
+          <td><%= cert['type'] %></td>
+          <td><%= cert['certificate_number'] %></td>
+          <td><%= cert['date_issued'] %></td>
+          <td><%= cert['expiry_date'] %></td>
+          <td><%= cert['issued_by'] %></td>
+          <td>Download</td>
          </tr>
+         <% end %>
       </table>
 
       <h4>PERSONAL DOCUMENTS</h4>
-      <table class="table table-bordered" style="width: 100%;">
+      <table class="table table-bordered" style="width: 100%; font-size: 12px;">
          <tr>
           <th>Document Kind</th>
           <th>Number</th>
@@ -193,20 +206,21 @@
           <th>Issued By</th>
           <th>Actions</th>
          </tr>
-
+        <% @crew['documents'].each do |doc| %>
          <tr>
-          <td>Year</td>
-          <td>School</td>
-          <td>Course Finished</td>
-          <td>Year</td>
-          <td>School</td>
-          <td>Course Finished</td>
+          <td><%= doc['document_kind'] %></td>
+          <td><%= doc['doc_number'] %></td>
+          <td><%= doc['date_issued'] %></td>
+          <td><%= doc['expiry_date'] %></td>
+          <td><%= doc['issued_by'] %></td>
+          <td>Download</td>
          </tr>
+        <% end %>
       </table>
 
 
       <h4>EMPLOYMENT RECORDS</h4>
-      <table class="table table-bordered" style="width: 100%;">
+      <table class="table table-bordered" style="width: 100%; font-size: 12px;">
          <tr>
           <th>Vessel</th>
           <th>Flag</th>
@@ -217,49 +231,52 @@
           <th>Sign Off</th>
           <th>Reason of Disembarkation</th>
          </tr>
-
-         <tr>
-          <td>Year</td>
-          <td>School</td>
-          <td>Course Finished</td>
-          <td>Year</td>
-          <td>School</td>
-          <td>Course Finished</td>
-          <td>Course Finished</td>
-          <td>Course Finished</td>
-         </tr>
+         <% @crew['employment_records'].each do |er| %>
+           <tr>
+            <td><%= er['vessel'] %></td>
+            <td><%= er['flag'] %></td>
+            <td><%= er['type'] %></td>
+            <td><%= er['manning_agent'] %></td>
+            <td><%= er['rank'] %></td>
+            <td><%= er['sign_on'] %></td>
+            <td><%= er['sign_off'] %></td>
+            <td><%= er['reason'] %></td>
+           </tr>
+         <% end %>
       </table>
 
       <h4>VESSEL EVALUATION</h4>
-      <table class="table table-bordered" style="width: 100%;">
+      <table class="table table-bordered" style="width: 100%; font-size: 12px;">
          <tr>
           <th>Vessel</th>
           <th>Date of Evaluation</th>
           <th>Actions</th>
           
          </tr>
-
+        <% @crew['crew_vessel_evaluations'].each do |cve| %>
          <tr>
-          <td>Year</td>
-          <td>School</td>
-          <td>Course Finished</td>
+          <td><%= cve['vessel'] %></td>
+          <td><%= cve['vessel_e'] %></td>
+          <td>Download</td>
          </tr>
+        <% end %>
       </table>
 
       <h4>OFFICE EVALUATION</h4>
-      <table class="table table-bordered" style="width: 100%;">
+      <table class="table table-bordered" style="width: 100%; font-size: 12px;">
          <tr>
           <th>Vessel</th>
           <th>Date of Evaluation</th>
           <th>Actions</th>
           
          </tr>
-
+        <% @crew['crew_office_evaluations'].each do |coe| %>
          <tr>
-          <td>Year</td>
-          <td>School</td>
-          <td>Course Finished</td>
+          <td><%= coe['vessel'] %></td>
+          <td><%= coe['vessel_e'] %></td>
+          <td>Download</td>
          </tr>
+        <% end %>
       </table>
     </div>
   </div>
@@ -270,324 +287,351 @@
     <div class="col-md-3 image-profile">
       <center>
        <%= image_tag "sample.jpg" %> <br />
-       <span class="name">Reynaldo Logmao</span><br /> <span>STATUS</span>
+       <span class="name"><%= "#{@crew['firstname']} #{@crew['middlename']} #{@crew['lastname']}" %></span><br />
+       Status: <span class="status"> <%= "#{@crew['status']}" %></span> | Code Number: <span class="code_no"><%= "#{@crew['code_number']}" %></span> <br />
+       Rank: <span class="rank"><%= "#{@crew['rank']}" %></span> 
+       
       </center>
     </div>
     <div class="col-md-9 details-profile infiniscroll">
       <h4>GENERAL INFORMATION</h4>
       <table class="table-prof-mobile" style="width: 100%;">
         <tr>
+         <th>Date employed: </th>
+         <td><%= "#{@crew['date_employed']}" %></td>
+        </tr>
+        <tr>
+         <th>Date of Promotion: </th>
+         <td><%= "#{@crew['date_of_promotion']}" %></td>
+        </tr>
+        <tr>
          <th>Vessel Assign: </th>
-         <td>Basha Marshal Alampay </td>
+         <td><%= "#{@crew['assigned_vessel']}" %></td>
         </tr>
         <tr>
          <th>Age: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['age']}" %></td>
         </tr>
 
         <tr>
          <th>Home Address: </th>
-         <td> Basha </td>
+         <td><%= "#{@crew['address']}" %></td>
         </tr>
         <tr>
          <th>City Address: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['city_address']}" %></td>
         </tr>
 
         <tr>
          <th>Provincial Address: </th>
-         <td> Basha </td>
+         <td><%= "#{@crew['provincial_address']}" %></td>
         </tr>
         <tr>
          <th>Zipcode: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['zip_code']}" %></td>
         </tr>
 
         <tr>
          <th>Birthday: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['birthday']}" %></td>
         </tr>
         <tr>
-         <th>Birthplace: </th>
-         <td>Basha </td>
+        <th>Birthplace: </th>
+         <td><%= "#{@crew['birthplace']}" %></td>
         </tr>
 
         <tr>
          <th>Telephone: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['telephone_no']}" %></td>
+         
         </tr>
         <tr>
          <th>Cellphone: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['cellphone_no']}" %></td>
         </tr>
 
         <tr>
-         <th>Civil Status: </th>
-         <td>Basha </td>
+          <th>Civil Status: </th>
+          <td><%= "#{@crew['civil_status']}" %></td>
         </tr>
         <tr>
          <th>Nationality: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['nationality']}" %></td>
         </tr>
 
         <tr>
          <th>Height: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['height']}" %></td>
         </tr>
         <tr>
          <th>Weight: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['weight']}" %></td>
         </tr>
 
         <tr>
-         <th>Shoe Color: </th>
-         <td>Basha </td>
+         <th>Shoe Size: </th>
+         <td><%= "#{@crew['shoe_size']}" %></td>
         </tr>
         <tr>
          <th>Cloth Size: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['cloth_size']}" %></td>
         </tr>
 
         <tr>
          <th>Eye Color: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['eye_color']}" %></td>
         </tr>
         <tr>
          <th>Distinguishing Mark: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['distinguishing_mark']}" %></td>
         </tr>
 
         <tr>
          <th>Blood Type: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['blood_type']}" %></td>
         </tr>
         <tr>
-         <th>Blood Pressure: </th>
-         <td>Basha </td>
+          <th>Blood Pressure: </th>
+         <td><%= "#{@crew['blood_pressure']}" %></td>
         </tr>
 
         <tr>
          <th>TIN Number: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['tin_no']}" %></td>
         </tr>
         <tr>
          <th>SSS Number: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['sss_no']}" %></td>
         </tr>
 
         <tr>
          <th>PAG-IBIG number: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['pagibig_number']}" %></td>
         </tr>
         <tr>
          <th>Philhealth: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['philhealth_number']}" %></td>
         </tr>
 
         <tr>
          <th>Father's Name: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['father_name']}" %></td>
         </tr>
         <tr>
-         <th>Mother's Maiden Name: </th>
-         <td>Basha </td>
+        <th>Mother's Maiden Name: </th>
+         <td><%= "#{@crew['mother_maiden_name']}" %></td>
        </tr>
 
        <tr>
          <th>Spouse Name: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['spouse_name']}" %></td>
         </tr>
         <tr>
          <th>Number of Children: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['number_of_children']}" %></td>
        </tr>
 
         <tr>
          <th>Are you a smoker? </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['is_smoker']}" %></td>
+        
         </tr>
         <tr>
-         <th>Nearest Relative: </th>
-         <td>Basha </td>
+          <th>Nearest Relative: </th>
+         <td><%= "#{@crew['nearest_relative_name']}" %></td>
        </tr>
 
        <tr>
          <th>Relationship: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['nearest_relative_relationship']}" %></td>
         </tr>
         <tr>
          <th>Address: </th>
-         <td>Basha </td>
+         <td><%= "#{@crew['nearest_relative_address']}" %></td>
        </tr>
       </table>
 
       <h4>EDUCATIONAL ATTAINMENT</h4>
-      <table class="table table-bordered" style="width: 100%;">
-         <tr>
-          <th>Year</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>School</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Course Finished</th>
-          <td>Year</td>
-         </tr>
-      </table>
+       <% @crew['educational_attainments'].each do |e|%>
+          <table class="table table-bordered" style="width: 100%;">
+             <tr>
+              <th>Year</th>
+              <td><%= e['year_graduated']%></td>
+             </tr>
+             <tr>
+              <th>School</th>
+              <td><%= e['school']%></td>
+             </tr>
+             <tr>
+              <th>Course Finished</th>
+              <td><%= e['course_finished']%></td>
+             </tr>
+          </table>
+        <% end %>
 
       <h4>LICENSES</h4>
-      <table class="table table-bordered" style="width: 100%;">
-         <tr>
-          <th>Type</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Number</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Date Issued</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Expiry Date</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Issued By</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Actions</th>
-          <td>Year</td>
-         </tr>
-      </table>
+       <% @crew['licenses'].each do |l| %>
+        <table class="table table-bordered" style="width: 100%;">
+           <tr>
+            <th>Type</th>
+             <td><%= l['type'] %></td>
+           </tr>
+           <tr>
+            <th>Number</th>
+            <td><%= l['license_number'] %></td>
+           </tr>
+           <tr>
+            <th>Date Issued</th>
+            <td><%= l['date_issued'] %></td>
+           </tr>
+           <tr>
+            <th>Expiry Date</th>
+            <td><%= l['expiry_date'] %></td>
+           </tr>
+           <tr>
+            <th>Issued By</th>
+            <td><%= l['issued_by'] %></td>
+           </tr>
+           <tr>
+            <th>Actions</th>
+            <td>Download</td>
+           </tr>
+        </table>
+       <% end %>
 
       <h4>CERTIFICATES</h4>
-      <table class="table table-bordered" style="width: 100%;">
-         <tr>
-          <th>Type</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Number</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Date Issued</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Expiry Date</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Issued By</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Actions</th>
-         </tr>
-      </table>
+      <% @crew['certificates'].each do |cert| %>
+        <table class="table table-bordered" style="width: 100%;">
+           <tr>
+            <th>Type</th>
+            <td><%= cert['type'] %></td>
+           </tr>
+           <tr>
+            <th>Number</th>
+            <td><%= cert['certificate_number'] %></td>
+           </tr>
+           <tr>
+            <th>Date Issued</th>
+            <td><%= cert['date_issued'] %></td>
+           </tr>
+           <tr>
+            <th>Expiry Date</th>
+            <td><%= cert['expiry_date'] %></td>
+           </tr>
+           <tr>
+            <th>Issued By</th>
+            <td><%= cert['issued_by'] %></td>
+           </tr>
+           <tr>
+            <th>Actions</th>
+            <td>Download</td>
+           </tr>
+        </table>
+      <% end %>
 
       <h4>PERSONAL DOCUMENTS</h4>
-      <table class="table table-bordered" style="width: 100%;">
-         <tr>
-          <th>Document Kind</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Number</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Date Issued</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Expiry Date</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Issued By</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Actions</th>
-          <td>Year</td> 
-         </tr>
-      </table>
+       <% @crew['documents'].each do |doc| %>
+        <table class="table table-bordered" style="width: 100%;">
+           <tr>
+            <th>Document Kind</th>
+            <td><%= doc['document_kind'] %></td>
+           </tr>
+           <tr>
+            <th>Number</th>
+            <td><%= doc['doc_number'] %></td>
+           </tr>
+           <tr>
+            <th>Date Issued</th>
+            <td><%= doc['date_issued'] %></td>
+           </tr>
+           <tr>
+            <th>Expiry Date</th>
+            <td><%= doc['expiry_date'] %></td>
+           </tr>
+           <tr>
+            <th>Issued By</th>
+            <td><%= doc['issued_by'] %></td>
+           </tr>
+           <tr>
+            <th>Actions</th>
+            <td>Download</td> 
+           </tr>
+        </table>
+      <% end %>
 
       <h4>EMPLOYMENT RECORDS</h4>
-      <table class="table table-bordered" style="width: 100%;">
-         <tr>
-          <th>Vessel</th>
-          <td>Year</td>
-         </tr>
-         <tr>
-          <th>Flag</th>
-          <td>School</td>
-         </tr>
-         <tr>
-          <th>Type</th>
-          <td>School</td>
-         </tr>
-         <tr>
-          <th>Manning Agent</th>
-          <td>School</td>
-         </tr>
-         <tr>
-          <th>Rank</th>
-          <td>School</td>
-         </tr>
-         <tr>
-          <th>Sign On</th>
-          <td>School</td>
-         </tr>
-         <tr>
-          <th>Sign Off</th>
-          <td>School</td>
-         </tr>
-         <tr>
-          <th>Reason of Disembarkation</th>
-          <td>School</td>
-         </tr>
-
-      </table>
+       <% @crew['employment_records'].each do |er| %>
+        <table class="table table-bordered" style="width: 100%;">
+           <tr>
+            <th>Vessel</th>
+            <td><%= er['vessel'] %></td>
+           </tr>
+           <tr>
+            <th>Flag</th>
+             <td><%= er['flag'] %></td>
+           </tr>
+           <tr>
+            <th>Type</th>
+           <td><%= er['type'] %></td>
+           </tr>
+           <tr>
+            <th>Manning Agent</th>
+           <td><%= er['manning_agent'] %></td>
+           </tr>
+           <tr>
+            <th>Rank</th>
+            <td><%= er['rank'] %></td>
+           </tr>
+           <tr>
+            <th>Sign On</th>
+            <td><%= er['sign_on'] %></td>
+           </tr>
+           <tr>
+            <th>Sign Off</th>
+            <td><%= er['sign_off'] %></td>
+           </tr>
+           <tr>
+            <th>Reason of Disembarkation</th>
+            <td><%= er['reason'] %></td>
+           </tr>
+        </table>
+       <% end %>
 
       <h4>VESSEL EVALUATION</h4>
-      <table class="table table-bordered" style="width: 100%;">
-         <tr>
-          <th>Vessel</th>
-          <td>School</td>
-         </tr>
-         <tr>
-          <th>Date of Evaluation</th>
-          <td>School</td>
-         </tr>
-         <tr>
-          <th>Actions</th>
-          <td>School</td>
-         </tr>
-      </table>
+      <% @crew['crew_vessel_evaluations'].each do |cve| %>
+        <table class="table table-bordered" style="width: 100%;">
+           <tr>
+            <th>Vessel</th>
+            <td><%= cve['vessel'] %></td>
+           </tr>
+           <tr>
+            <th>Date of Evaluation</th>
+             <td><%= cve['vessel_e'] %></td>
+           </tr>
+           <tr>
+            <th>Actions</th>
+            <td>Download</td>
+           </tr>
+        </table>
+     <% end %>
 
       <h4>OFFICE EVALUATION</h4>
-      <table class="table table-bordered" style="width: 100%;">
-         <tr>
-          <th>Vessel</th>
-          <td>School</td>
-         </tr>
-         <tr>
-          <th>Date of Evaluation</th>
-          <td>School</td>
-         </tr>
-         <tr>
-          <th>Actions</th>
-          <td>School</td>
-         </tr>
-      </table>
+      <% @crew['crew_office_evaluations'].each do |coe| %>
+        <table class="table table-bordered" style="width: 100%;">
+           <tr>
+            <th>Vessel</th>
+            <td><%= coe['vessel'] %></td>
+           </tr>
+           <tr>
+            <th>Date of Evaluation</th>
+             <td><%= coe['vessel_e'] %></td>
+           </tr>
+           <tr>
+            <th>Actions</th>
+            <td>Download</td>
+           </tr>
+        </table>
+     <% end %>
     </div>
   </div>
 </div>
