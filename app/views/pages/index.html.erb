@@ -1,12 +1,11 @@
 <div class="container-fluid">
   <%= render partial: "shared/navigation" %>
-
     <div class="for_non_mobile">
       <div class="row">
         <div class="col-md-12 latest-er">
-         <h3>  <%= "#{@crew['firstname']}"%>'s Latest Employment Record</h3>
+         <h3><%= "#{@crew['firstname']}"%>'s Latest Employment Record</h3>
           <table class="table table-bordered" style="width: 100%; font-size: 12px;">
-             <tr>
+             <tr style="background-color: white;">
               <th>Vessel</th>
               <th>Flag</th>
               <th>Type</th>
@@ -36,41 +35,43 @@
     <div class="for_mobile">
       <div class="row">
         <div class="col-md-12 latest-er">
-         <h3>  Rey's Latest Employment Record</h3>
+         <h3><%= "#{@crew['firstname']}"%>'s Latest Employment Record</h3>
+         <% @crew['employment_records_index'].each do |er| %>
           <table class="table table-bordered">
             <tr>
               <th>Vessel</th> 
-              <td></td>
+              <td><%= er['vessel'] %></td>
             </tr>
             <tr>
               <th>Flag</th>
-              <td></td>
+              <td><%= er['flag'] %></td>
             </tr>
             <tr>
               <th>Type</th>
-              <td></td>
+              <td><%= er['type'] %></td>
             </tr>
             <tr>
               <th>Manning Agent</th>
-              <td></td>
+              <td><%= er['manning_agent'] %></td>
             </tr>
             <tr>
-              <th>Rank</th>
-              <td></td>
+             <th>Rank</th>
+             <td><%= er['rank'] %></td>
             </tr>
             <tr>
               <th>Sign On</th>
-              <td></td>
+              <td><%= er['sign_on'] %></td>
             </tr>
             <tr>
               <th>Sign Off</th>
-              <td></td>
+              <td><%= er['sign_off'] %></td>
             </tr>
             <tr>
               <th>Reason of Disemabarkation</th>
-              <td></td>
+              <td><%= er['reason'] %></td>
             </tr>
           </table>
+           <% end %>
         </div>  
       </div>
     </div>

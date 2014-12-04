@@ -1,13 +1,105 @@
 <div class="container-fluid">
   <%= render partial: "shared/navigation" %>
+  <div class="for_non_mobile">
+    <div class="row">
+      <div class="col-md-12 msg-btn">
+        <div class="row">
+            <div class="panel-heading">
+              <h5 class="panel-title">
+                <%= link_to "#new", :class => "btn btn-info", "data-toggle" => "collapse", "data-parent" => "#accordion" do %>
+                  Compose New Message
+                <% end %>
+              </h5>
+            </div>
+        </div>
+     </div>
+     </div>
 
-  <div class="row">
-    <div class="col-md-12 msg-btn">
-      <%= link_to "Compose", "#", :class => "btn btn-default" %> 
-    </div>
-    <div class="col-md-12">
-      
+    <div class="row">
+      <div class="col-md-8">
+        <table class="message-table">
+          <tr>
+           <td style="width: 5%;"><span class="glyphicon glyphicon-star-empty" style="color: yellow;"></span></td>
+           <td class="col-md-3">Raphael Alampay</td>
+           <td class="col-md-3">Hello Baliwag Portal Crew..</td>
+           <td class="col-md-3">April 27, 1993</td>
+           <td class="col-md-3"><%= link_to "Show", "#" %></td>
+          </tr> 
+        </table>
+         <table class="message-table">
+          <tr>
+           <td style="width: 5%;"><span class="glyphicon glyphicon-star-empty" style="color: yellow;"></span></td>
+           <td class="col-md-3">Raphael Alampay</td>
+           <td class="col-md-3">Hello Baliwag Portal Crew..</td>
+           <td class="col-md-3">April 27, 1993</td>
+           <td class="col-md-3"><%= link_to "Show", "#" %></td>
+        </table>
+      </div>
+      <div class="col-md-4">
+        <div class="basicBox">
+          <div class="row">
+            <div class="col-md-12">
+              <div id="new" class="panel-collapse collapse">
+                <div class="panel-body">
+                   <%= render partial: "shared/form" %>
+                </div>
+              </div>
+             </div>
+           </div>
+        </div>
+      </div>
     </div>
   </div>
 
+  <div class="for_mobile">
+     <div class="row">
+      <div class="col-md-12 msg-btn">
+        <div class="row">
+            <div class="panel-heading">
+              <h5 class="panel-title">
+                <%= link_to "#new1", :class => "btn btn-info", "data-toggle" => "collapse", "data-parent" => "#accordion" do %>
+                  Compose New Message
+                <% end %>
+              </h5>
+            </div>
+        </div>
+     </div>
+     </div>
+     <div class="row">
+      <div class="col-md-12">
+          <div class="basicBox1">
+            <div class="row">
+              <div class="col-md-12">
+                <div id="new1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <%= render partial: "shared/form" %>
+                  </div>
+                </div>
+               </div>
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="message-table">
+            <tr>
+             <td style="width: 5%;"><span class="glyphicon glyphicon-star-empty" style="color: yellow;"></span></td>
+             <td class="col-md-3">Raphael Alampay</td>
+             <td class="col-md-3">Hello Baliwag Portal Crew..</td>
+             <td class="col-md-3">April 27, 1993</td>
+             <td class="col-md-3"><%= link_to "Show", "#" %></td>
+            </tr> 
+          </table>
+           <table class="message-table">
+            <tr>
+             <td style="width: 5%;"><span class="glyphicon glyphicon-star-empty" style="color: yellow;"></span></td>
+             <td class="col-md-3">Raphael Alampay</td>
+             <td class="col-md-3">Hello Baliwag Portal Crew..</td>
+             <td class="col-md-3">April 27, 1993</td>
+             <td class="col-md-3"><%= link_to "Show", "#" %></td>
+          </table>
+        </div>
+    </div>
+   </div>
 </div>
